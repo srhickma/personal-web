@@ -4,7 +4,7 @@ html{
 
 body{
     font-family: 'Source Code Pro', monospace;
-    background: #f7f6f5;
+    background: #31363B;
     color: #212429;
     margin: 0;
     height: 100%;
@@ -21,49 +21,45 @@ h1{
     color: #f7f6f5;
 }
 
-.wait-for-1-second{
-    -webkit-animation-delay: 1s;
-    -moz-animation-delay: 1s;
-    animation-delay: 1s;
+#core-cell{
+    overflow-y: hidden;
+    width: calc(100% - 240px);
+    padding: 0 20px;
+    background: #f7f6f5;
 }
 
-#core-cell{
+#core-cell-internal{
+    height: 100%;
     -webkit-animation-delay: 1s;
     -moz-animation-delay: 1s;
     animation-delay: 1s;
-    overflow-y: auto;
-    width: calc(100% - 220px);
-    padding: 0 0 0 20px;
 }
 
 #navigation-cell{
-    -webkit-animation-delay: 1s;
-    -moz-animation-delay: 1s;
-    animation-delay: 1s;
     width: 200px;
     padding: 0;
 }
 
-.navigation {
+.navigation{
     width: inherit;
 }
 
-.navigation a {
+.navigation a{
     text-align: right;
-    background: #f7f6f5;
-    color: inherit;
+    color: #f7f6f5;
     display: block;
     padding: 6px;
     text-decoration: none;
     border-right: 2px solid #212429;
 }
 
-.navigation a:hover {
+.navigation a:hover{
+    color: #3090C7;
     border-color: #3090C7;
     cursor: pointer;
 }
 
-.navigation a.active {
+.navigation a.active{
     color: #3090C7;
     border-color: #3090C7;
 }
@@ -112,7 +108,7 @@ h1{
 }
 
 .tab-content{
-    display: none;
+    display: flex;
     z-index: -10;
     height: 100%;
 }
@@ -126,4 +122,76 @@ h1{
 #content-table{
     height: calc(100% - 60px);
     width: 100%;
+}
+
+.portrait{
+    border-radius: 50%;
+    height: 110px;
+    width: 110px;
+}
+
+.project{
+    width: 350px;
+    height: 400px;
+    float: left;
+}
+
+.project-title{
+    margin: 10px 0;
+    float: left;
+}
+
+.project-links{
+    text-align: center;
+    font-size: 2.5em;
+    color: #212429;
+    overflow: hidden;
+    float: right;
+}
+.project-links a {
+    color: inherit;
+    text-decoration: none;
+    float: right;
+}
+.project-links i {
+    margin: 0;
+    cursor: pointer;
+    transition: color 300ms ease, margin-top 300ms ease;
+}
+.project-links i:hover {
+    margin-top: -1px;
+    color: #3090C7;
+}
+
+.horizontal-separator{
+    width: 100%;
+    border-bottom: 2px solid #212429;
+}
+
+.horizontal-separator-margin{
+    width: 100%;
+    border-bottom: 2px solid #212429;
+    margin: 10px 0;
+}
+
+.side-padded-div{
+    margin: 0 10px 0;
+    width: calc(100% - 20px);
+}
+
+.margin-auto{
+    margin: auto;
+}
+
+.no-select {
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.project-banner{
+    height: 50px;
+    width: calc(100% - 20px);
+    padding: 0 10px;
 }
