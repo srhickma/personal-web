@@ -2021,23 +2021,6 @@ var PDFViewerApplication = {
     });
   }
 };
-var HOSTED_VIEWER_ORIGINS = ['null', 'http://mozilla.github.io', 'https://mozilla.github.io'];
-function loadAndEnablePDFBug(enabledTabs) {
-  return new Promise(function (resolve, reject) {
-    var appConfig = PDFViewerApplication.appConfig;
-    var script = document.createElement('script');
-    script.src = appConfig.debuggerScriptPath;
-    script.onload = function () {
-      PDFBug.enable(enabledTabs);
-      PDFBug.init(pdfjsLib, appConfig.mainContainer);
-      resolve();
-    };
-    script.onerror = function () {
-      reject(new Error('Cannot load debugger at ' + script.src));
-    };
-    (document.getElementsByTagName('head')[0] || document.body).appendChild(script);
-  });
-}
 function webViewerInitialized() {
   var appConfig = PDFViewerApplication.appConfig;
   var waitForBeforeOpening = [];
@@ -2096,12 +2079,6 @@ function webViewerInitialized() {
           viewer.classList.add('textLayer-' + hashParams['textlayer']);
           break;
       }
-    }
-    if ('pdfbug' in hashParams) {
-      PDFJS.pdfBug = true;
-      var pdfBug = hashParams['pdfbug'];
-      var enabled = pdfBug.split(',');
-      waitForBeforeOpening.push(loadAndEnablePDFBug(enabled));
     }
   }
   mozL10n.setLanguage(PDFJS.locale);
@@ -7764,7 +7741,6 @@ function getViewerConfiguration() {
       lessInfoButton: document.getElementById('errorShowLess')
     },
     printContainer: document.getElementById('printContainer'),
-    debuggerScriptPath: './debugger.js',
     defaultUrl: DEFAULT_URL
   };
 }
