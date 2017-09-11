@@ -19,12 +19,38 @@ h1{
     padding: 10px;
     background: #212429;
     color: #f7f6f5;
+    z-index: 2;
+}
+
+tbody{
+    height: 100%;
+    display: inherit;
+}
+
+tr{
+    height: 100%;
+    display: inherit;
+}
+
+#header-back{
+    background: #212429;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 62px;
+    z-index: 1;
+}
+
+#content-table{
+    display: block;
+    height: calc(100% - 60px);
+    width: 100%;
 }
 
 #core-cell{
     overflow-y: hidden;
-    width: calc(100% - 240px);
-    padding: 0 20px;
+    width: calc(100% - 202px);
     background: #f7f6f5;
 }
 
@@ -108,20 +134,17 @@ h1{
 }
 
 .tab-content{
-    display: flex;
+    display: block;
     z-index: -10;
     height: 100%;
+    overflow-y: auto;
+    padding: 0 20px;
 }
 
 .block-cell{
     display: block;
     float: left;
     height: 100%;
-}
-
-#content-table{
-    height: calc(100% - 60px);
-    width: 100%;
 }
 
 .portrait{
@@ -131,14 +154,16 @@ h1{
 }
 
 .project{
-    width: 350px;
+    width: 450px;
     height: 400px;
     float: left;
+    margin-right: 20px;
 }
 
 .project-title{
     margin: 10px 0;
     float: left;
+    width: calc(100% - 50px);
 }
 
 .project-links{
@@ -156,11 +181,49 @@ h1{
 .project-links i {
     margin: 0;
     cursor: pointer;
-    transition: color 300ms ease, margin-top 300ms ease;
+    transition: color 300ms ease;
 }
 .project-links i:hover {
-    margin-top: -1px;
     color: #3090C7;
+}
+
+.project-banner{
+    display: inline-block;
+    width: calc(100% - 20px);
+    padding: 0 10px;
+}
+
+.experience{
+    width: 100%;
+}
+
+.experience-title{
+    float: left;
+    color: #212429;
+}
+.experience-title:hover{
+    color: #3090C7;
+}
+
+.experience-banner-data{
+    float: right;
+}
+
+.experience-banner{
+    display: inline-block;
+    width: calc(100% - 20px);
+    padding: 0 10px;
+}
+
+.experience-img{
+    float: right;
+    width: 360px;
+}
+
+.experience-details{
+    margin: 0 10px 0;
+    width: calc(100% - 380px);
+    display: inline-block;
 }
 
 .horizontal-separator{
@@ -179,8 +242,8 @@ h1{
     width: calc(100% - 20px);
 }
 
-.margin-auto{
-    margin: auto;
+.ten-zero-margin{
+    margin: 10px 0;
 }
 
 .no-select {
@@ -190,8 +253,6 @@ h1{
     user-select: none;
 }
 
-.project-banner{
-    height: 50px;
-    width: calc(100% - 20px);
-    padding: 0 10px;
+.horizontal-block{
+    width: 100%;
 }
