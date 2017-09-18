@@ -153,10 +153,7 @@ tr{
 }
 
 .project{
-    width: 450px;
-    height: 400px;
-    float: left;
-    margin-right: 20px;
+    width: 100%;
 }
 
 .project-title{
@@ -168,7 +165,7 @@ tr{
 .project-links{
     text-align: center;
     font-size: 2.5em;
-    color: #212429;
+    color: inherit;
     overflow: hidden;
     float: right;
 }
@@ -192,18 +189,6 @@ tr{
     padding: 0 10px;
 }
 
-.experience{
-    width: 100%;
-}
-
-.experience-title{
-    float: left;
-    color: #212429;
-}
-.experience-title:hover{
-    color: #3090C7;
-}
-
 .experience-banner-data{
     float: right;
 }
@@ -212,17 +197,6 @@ tr{
     display: inline-block;
     width: calc(100% - 20px);
     padding: 0 10px;
-}
-
-.experience-img{
-    float: right;
-    width: 360px;
-}
-
-.experience-details{
-    margin: 0 10px 0;
-    width: calc(100% - 380px);
-    display: inline-block;
 }
 
 .horizontal-separator{

@@ -1,5 +1,6 @@
 body{
     height: 100%;
+    overflow-y: auto;
 }
 
 .nav{
@@ -68,6 +69,40 @@ body{
     cursor: pointer;
 }
 
+.large-slice-image{
+    float: left;
+    width: 25%;
+    height: 25%;
+    margin-right: 5%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 3px;
+    background: rgba(0,0,0,0.2);
+}
+
+.project-image{
+    float: left;
+    width: 245px;
+    height: auto;
+    margin-right: 15px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 3px;
+    background: #333333;
+}
+.project-description{
+
+}
+
+
+@media screen and (max-width: 725px) {
+    .project-description{
+        float: left;
+    }
+}
+
 #about-me img{
     width: 25%;
     height: 25%;
@@ -79,12 +114,53 @@ body{
     background: rgba(0,0,0,0.2);
 }
 #about-me h2{
-    font-size: 16px;
     font-size: calc(3vw + 4px);
 }
+
+.section-title{
+    font-size: calc(3vw + 24px);
+    margin: auto;
+    padding: 2vw;
+}
+
+.experience-details{
+    margin: 0 10px 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.experience-img{
+    float: top;
+    margin: auto;
+    width: 100%;
+    max-width: 360px;
+}
+
+.experience-title{
+    float: left;
+    color: #f7f6f5;
+    cursor: pointer;
+}
+.experience-title:hover{
+    color: #3090C7;
+}
+
 @media screen and (min-width: 1000px) {
     #about-me h2{
         font-size: 34px;
+    }
+
+    .section-title{
+        font-size: 54px;
+    }
+
+    .experience-details{
+        width: calc(100% - 380px);
+    }
+
+    .experience-img{
+        float: right;
+        width: 360px;
     }
 }
 
@@ -97,6 +173,11 @@ body{
     width: 100%;
     background-color: #f7f6f5;
     color: #333333;
+}
+.section-slice{
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .layer{

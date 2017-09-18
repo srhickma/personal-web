@@ -61,3 +61,9 @@ function setDisplayIn(object, time, display){
 function scroll(tabId){
     $('body').scrollTo(document.getElementById(tabId), 800);
 }
+
+var vectors = ["img/blue-vec1.svg", "img/blue-vec2.svg", "img/blue-vec3.svg"];
+var sections = document.getElementsByClassName("section-slice");
+for(var i = 0; i < sections.length; i ++){
+    sections[i].style.backgroundImage = "url(" + vectors[Math.floor(Math.random() * vectors.length)] + ")";
+}
