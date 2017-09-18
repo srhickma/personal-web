@@ -81,6 +81,10 @@ body{
     background: rgba(0,0,0,0.2);
 }
 
+.large-slice-text{
+    font-size: calc(3vw + 4px);
+}
+
 .project-image{
     float: left;
     width: 245px;
@@ -147,6 +151,10 @@ body{
 
 @media screen and (min-width: 1000px) {
     #about-me h2{
+        font-size: 34px;
+    }
+
+    .large-slice-text{
         font-size: 34px;
     }
 
