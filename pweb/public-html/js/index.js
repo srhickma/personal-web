@@ -1,13 +1,3 @@
-function navigateTo(evt, tabId){
-    var tabLinks = document.getElementsByClassName("tab");
-    for(var i = 0; i < tabLinks.length; i++){
-        tabLinks[i].className = tabLinks[i].className.replace(" active", "");
-    }
-
-    evt.currentTarget.className += " active";
-    $('#core-cell').scrollTo(document.getElementById(tabId), 800);
-}
-
 window.onload = function(){
     handleResize();
     $(window).resize(handleResize);
@@ -59,7 +49,8 @@ function setDisplayIn(object, time, display){
 }
 
 function scroll(tabId){
-    $('body').scrollTo(document.getElementById(tabId), 800);
+    $('html, body').animate({ scrollTop: $('#' + tabId).offset().top - 57 }, 'slow');
+    return false;
 }
 
 var vectors = ["img/blue-vec1.svg", "img/blue-vec2.svg", "img/blue-vec3.svg"];

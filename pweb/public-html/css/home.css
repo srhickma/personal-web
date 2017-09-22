@@ -159,7 +159,7 @@ tr{
 .project-title{
     margin: 10px 0;
     float: left;
-    width: calc(100% - 50px);
+    width: calc(100% - 100px);
 }
 
 .project-links{
@@ -173,6 +173,7 @@ tr{
     color: inherit;
     text-decoration: none;
     float: right;
+    margin-left: 10px;
 }
 .project-links i {
     margin: 0;
