@@ -161,15 +161,6 @@ body{
     .section-title{
         font-size: 54px;
     }
-
-    .experience-details{
-        width: calc(100% - 380px);
-    }
-
-    .experience-img{
-        float: right;
-        width: 360px;
-    }
 }
 
 .dark-slice{
