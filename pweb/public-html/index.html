@@ -25,9 +25,9 @@
 
         <div id="hamburger" style="display:none" class="animated fadeInUp" onclick="hamburgerOut()">
             <div id="hamburger-content">
-                <h2 class="no-select" onclick="hamburgerOut();scroll('about')">About Me</h2>
-                <h2 class="no-select" onclick="hamburgerOut();scroll('experience')">Experience</h2>
-                <h2 class="no-select" onclick="hamburgerOut();scroll('side-projects')">Side Projects</h2>
+                <h2 class="no-select" onclick="hamburgerOut();custom_scroll('about')">About Me</h2>
+                <h2 class="no-select" onclick="hamburgerOut();custom_scroll('experience')">Experience</h2>
+                <h2 class="no-select" onclick="hamburgerOut();custom_scroll('side-projects')">Side Projects</h2>
                 <h2 class="no-select" onclick="window.location = 'resume/viewer.html'">Resume</h2>
             </div>
         </div>
@@ -61,21 +61,23 @@
                         <br>
                         I spend most of my free time working on a plethora of ongoing side projects, researching and
                         scheming up new ideas, listening to music, and playing video games. Lately I have been
-                        particularly interested in computer productivity and process automation, as well as a new
-                        procedurally generated game I have been working on.<br>
+                        particularly interested in learning and experimenting with Rust. My current project is a
+                        utility for formatting text (specifically code) using lexers and parsers to read in, and then
+                        reconstruct some input following a set of patterns.<br>
                         <br>
-                        Strong Experience: Java (standalone and server), C#, Spring, SQL, JavaScript, BASH, JSON (through Java)<br>
-                        Fair Experience: C, C++, PHP, HTML, CSS, AngularJS, JQuery, PBasic<br>
+                        Strong Experience: Java (standalone and server), C#, Go, Spring, SQL, JavaScript, JSON<br>
+                        Fair Experience: Rust, C, C++, PHP, HTML, CSS, AngularJS, JQuery, PBasic, BASH<br>
                         Used Occasionally: NodeJS, Ruby, Assembly, VHDL<br>
                         <br>
-                        I have had home project and working experience using:<br>
+                        I have had side projects and work experience using:<br>
                         - Unit Testing: JUnit, Mockito, NUnit, Jasmine<br>
-                        - Build: Gradle, Jenkins<br>
+                        - Build: Gradle, Jenkins, TravisCI<br>
                         - Deployment: Ansible, Terraform, Docker<br>
-                        - Server/Cloud: Datadog, REST, AJAX, AWS (SNS, SQS, SWF, S3, EC2, CodeDeploy)<br>
-                        - Database: MySQL, JPA, Hibernate<br>
+                        - Server/Cloud: Datadog, Prometheus, REST, AWS (SNS, SQS, SWF, S3, EC2, CodeDeploy), JWT<br>
+                        - Database: MongoDB, MySQL, JPA, Hibernate<br>
                         - Coding Styles: Dependency Injection, Factories, Builders, Beans, MVC<br>
-                        - Other: Unity3D, JavaFX, Swing, MonoDevelop<br>
+                        - Editors: Spacemacs, MonoDevelop, Visual Studio (Code), anything JetBrains<br>
+                        - Other: Unity3D, Photon, UWP, JavaFX, Swing<br>
                     </p>
                 </div>
             </div>
@@ -103,7 +105,11 @@
                         <div class="experience-details">
                             <h3 class="ten-zero-margin">Software Developer</h3>
                             <ul>
-                                <li>INSERT POINTS FROM RESUME HERE</li>
+                                <li>Proposed and implemented a scalable and load-balanced backend architecture for user-management, real-time messaging, and data synchronization on AWS, written in Go.</li>
+                                <li>Introduced stateless authentication and role-based authorization mechanism using JSON Web Tokens.</li>
+                                <li>Developed platform agnostic .NET web socket and http implementations for multi-threaded API clients.</li>
+                                <li>Wrote memory efficient Google Poly wrapper to rank and page results based on keywords.</li>
+                                <li>Added DevOps functionality through role-based authentication, Prometheus metrics, and Ansible deployment across all servers.</li>
                             </ul>
                         </div>
                         <img class="experience-img" style="width:100px;margin:40px" src="img/spatial.svg"/>
@@ -320,8 +326,8 @@
 
         </div>
 
-        <script src="js/index.js"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="js/index.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

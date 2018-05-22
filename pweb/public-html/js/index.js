@@ -48,7 +48,7 @@ function setDisplayIn(object, time, display){
     }, time);
 }
 
-function scroll(tabId){
+function custom_scroll(tabId){
     $('html, body').animate({ scrollTop: $('#' + tabId).offset().top - 57 }, 'slow');
     return false;
 }
