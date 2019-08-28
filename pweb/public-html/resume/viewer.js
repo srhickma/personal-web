@@ -2102,7 +2102,7 @@ function webViewerInitialized() {
     PDFViewerApplication.pdfSidebar.toggle();
   });
   Promise.all(waitForBeforeOpening).then(function () {
-      webViewerOpenFileViaURL('../resources/resume.pdf');
+      webViewerOpenFileViaURL('../res/resume.pdf');
   }).catch(function (reason) {
     PDFViewerApplication.error(mozL10n.get('loading_error', null, 'An error occurred while opening.'), reason);
   });
