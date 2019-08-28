@@ -2102,7 +2102,14 @@ function webViewerInitialized() {
     PDFViewerApplication.pdfSidebar.toggle();
   });
   Promise.all(waitForBeforeOpening).then(function () {
-      webViewerOpenFileViaURL('../res/resume.pdf');
+      var hash = document.location.hash.substring(1);
+      var hashParams = parseQueryString(hash);
+      if ('name' in hashParams) {
+          var name = hashParams['name'];
+          if (name.match(/^[\w]+$/)) {
+              webViewerOpenFileViaURL('../res/' + name + '.pdf');
+          }
+      }
   }).catch(function (reason) {
     PDFViewerApplication.error(mozL10n.get('loading_error', null, 'An error occurred while opening.'), reason);
   });
