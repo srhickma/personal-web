@@ -53,7 +53,7 @@ function custom_scroll(tabId){
     return false;
 }
 
-var vectors = ["img/blue-vec1.svg", "img/blue-vec2.svg", "img/blue-vec3.svg"];
+var vectors = ["res/blue-vec1.svg", "res/blue-vec2.svg", "res/blue-vec3.svg"];
 var sections = document.getElementsByClassName("section-slice");
 for(var i = 0; i < sections.length; i ++){
     sections[i].style.backgroundImage = "url(" + vectors[Math.floor(Math.random() * vectors.length)] + ")";
