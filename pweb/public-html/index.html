@@ -28,7 +28,7 @@
                 <h2 class="no-select" onclick="hamburgerOut();custom_scroll('about')">About Me</h2>
                 <h2 class="no-select" onclick="hamburgerOut();custom_scroll('experience')">Experience</h2>
                 <h2 class="no-select" onclick="hamburgerOut();custom_scroll('side-projects')">Side Projects</h2>
-                <h2 class="no-select" onclick="window.location = 'pdf/viewer.html#name=resume'">Resume</h2>
+                <h2 class="no-select" onclick="window.location = 'pdf/viewer.html#name=resume'">Résumé</h2>
                 <h2 class="no-select" onclick="window.location = 'pdf/viewer.html#name=cv'">Curriculum Vitae</h2>
             </div>
         </div>
@@ -51,43 +51,72 @@
 
             <div class="light-slice">
                 <div class="layer">
-                    <p>
-                        Hi I'm Shane! I am a third year undergraduate student at the University of Waterloo
-                        pursuing a Bachelor of Software Engineering (BSE) degree.<br>
-                        <br>
-                        I am passionate about engineering and computer science and I love to learn. I like to dig down
-                        into old tech to see what makes it tick, as well as explore new and emerging technologies.
-                        I often find myself obsessing over my latest ideas and enjoy the freedom and challenge of
-                        implementing something entirely new from scratch. I would never turn down an opportunity to get
-                        my hands dirty with new project or problem!<br>
-                        <br>
-                        I spend most of my free time working on side projects, researching and
-                        scheming up new ideas, listening to music, and playing video games. Lately I have been
-                        particularly interested in learning and experimenting with Rust. My
-                        <a href="https://github.com/srhickma/padd">current project</a> is a utility for formatting text
-                        (primarily code) by scanning, parsing, and reconstructing text based on a set of patterns.<br>
-                        <br>
-                        <b>Languages I have used:</b><br>
-                        Strong Experience: Java, Rust, Go, C, C++, C#, SQL, JavaScript<br>
-                        Fair Experience: Kotlin, PHP, HTML, CSS, AngularJS, JQuery, PBasic, BASH<br>
-                        Used Occasionally: NodeJS, Ruby, Assembly, VHDL<br>
-                        <br>
-                        <b>Technologies I have used:</b><br>
-                        - Build/CI: Gradle, Maven, Jenkins, TravisCI, CodeCov, kcov, Jacoco<br>
-                        - Deployment: Ansible, Terraform, Docker, Kubernetes<br>
-                        - Server/Cloud: RESTful, AWS (Kinesis, SNS, SQS, SWF, S3, EC2, CodeDeploy), Heroku, JWT<br>
-                        - Database: MongoDB, MySQL<br>
-                        - Metrics: Datadog, Prometheus, LogDNA, Sentry<br>
-                        - Editors: Spacemacs, Visual Studio, anything by JetBrains<br>
-                        - Java Technologies: Guice, Spring, Hibernate, JPA, Wire, JavaFX, Swing<br>
-                        - Other: Unity3D, Photon, UWP<br>
-                    </p>
+                    <div>
+                        <p>Hi I'm Shane! I am a third year undergraduate student at the University of Waterloo
+                            pursuing a Bachelor of Software Engineering (BSE) degree.</p>
+                        <p>I am passionate about engineering and computer science and I love to learn. I like to dig down
+                            into old tech to see what makes it tick, as well as explore new and emerging technologies.
+                            I often find myself obsessing over my latest ideas and enjoy the freedom and challenge of
+                            implementing something entirely new from scratch. I would never turn down an opportunity to get
+                            my hands dirty with new project or problem!</p>
+                        <p>I spend most of my free time working on side projects, researching and
+                            scheming up new ideas, listening to music, and playing video games. Lately I have been
+                            particularly interested in learning and experimenting with Rust. My
+                            <a href="https://github.com/srhickma/padd">current project</a> is a utility for formatting text
+                            (primarily code) by scanning, parsing, and reconstructing text based on a set of patterns.</p>
+                        <b>Languages I have used:</b>
+                        <ul>
+                            <li>Strong Experience: Java, Rust, Go, Kotlin, C, C++, C#, SQL</li>
+                            <li>Fair Experience: Scala, PHP, JavaScript, HTML, CSS, PBasic, Assembly, MATLAB</li>
+                            <li>Used Occasionally: NodeJS, Ruby, Python, VHDL, BASH</li>
+                        </ul>
+                        <b>Technologies I have used:</b>
+                        <ul>
+                            <li>Server/Cloud: REST, AWS, Heroku, NGINX, SocketIO, Spring, UNIX</li>
+                            <li>Database: yugabyteDB, MongoDB, PostgreSQL, MySQL, Hibernate, JPA, Diesel, gh-ost</li>
+                            <li>Security: JWT, AES-CTR, HMAC, RSA, TLS, OpenSSH, OpenSSL</li>
+                            <li>Deployment: Ansible, Terraform, Docker, Kubernetes</li>
+                            <li>Build/CI: Gradle, Maven, [C]Make, Jenkins, TravisCI, various code coverage tools</li>
+                            <li>Monitoring: Datadog, Prometheus, LogDNA, Sentry</li>
+                            <li>App Development: Unity3D, Photon, UWP, Andrioid Studio, JavaFX, Swing</li>
+                            <li>Editors: Spacemacs, Visual Studio [Code], anything by JetBrains</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
             <div id="experience" class="section-slice">
                 <div class="layer">
                     <h2 class="section-title">Experience</h2>
+                </div>
+            </div>
+
+            <div class="dark-slice">
+                <div class="layer">
+                    <div class="experience-banner">
+                        <a href="https://www.yugabyte.com/" target="_blank"><h2 class="experience-title ten-zero-margin">YugaByte</h2></a>
+                        <div class="experience-banner-data">
+                            <h2 class="ten-zero-margin">May to Aug, 2019</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="light-slice">
+                <div class="layer">
+                    <div class="experience">
+                        <div class="experience-details">
+                            <h3 class="ten-zero-margin">Software Engineer Intern - Query Layer Team</h3>
+                        </div>
+                        <ul>
+                            <li>Member of Query Layer team, working to integrate Postgres fronted with distributed document store backend.</li>
+                            <li>Wrote robust and portable shared memory library to improve system catalog cache consistency across nodes.</li>
+                            <li>Added support for Postgres role-based access control, ensuring consistency in a distributed environment.</li>
+                            <li>Designed and implemented a gflag-based configuration mechanism to make Postgres configurable through YugaByte.</li>
+                            <li>Contributor on multiple open-source projects at YugaByte, including <a href="https://github.com/YugaByte/yugabyte-db/commits?author=srhickma">yugabyte-db</a>.</li>
+                        </ul>
+                        <img class="experience-img" style="width:256px;margin:40px" src="res/yugabyte.svg"/>
+                    </div>
                 </div>
             </div>
 
@@ -110,13 +139,11 @@
                         </div>
                         <ul>
                             <li>Architected an inter-server event framework using Amazon Kinesis and Protocol Buffers.</li>
-                            <li>Implemented several complex email cadences to promote and notify users of new features, with visualized A/B tests for subject lines and content.</li>
                             <li>Designed and implemented APIs to support offline ordering, retailer-to-maker referrals, and out-of-stock products, contributing to user acquisition and an overall increase in sales.</li>
-                            <li>Added web-hooks to push logged errors into Redshift, supporting more complex error analysis.</li>
-                            <li>Mentored and on-boarded new backend developers as the team nearly doubled in size.</li>
+                            <li>Implemented several complex email cadences to promote and notify users of new features, with visualized A/B tests for subject lines and content.</li>
                             <li>Integrated code coverage tracking into TravisCI to motivate better testing practices.</li>
                         </ul>
-                        <img class="experience-img" style="width:100px;margin:40px" src="res/faire.svg"/>
+                        <img class="experience-img" style="width:164px;margin:40px" src="res/faire.svg"/>
                     </div>
                 </div>
             </div>
@@ -124,7 +151,7 @@
             <div class="dark-slice">
                 <div class="layer">
                     <div class="experience-banner">
-                        <a href="https://spatial.is/" target="_blank"><h2 class="experience-title ten-zero-margin">Spatial Systems Incorporated</h2></a>
+                        <a href="https://spatial.is/" target="_blank"><h2 class="experience-title ten-zero-margin">Spatial</h2></a>
                         <div class="experience-banner-data">
                             <h2 class="ten-zero-margin">Jan to April, 2018</h2>
                         </div>
@@ -141,8 +168,7 @@
                                 <li>Proposed and implemented a scalable and load-balanced backend architecture for user-management, real-time messaging, and data synchronization on AWS, written in Go.</li>
                                 <li>Introduced stateless authentication and role-based authorization mechanism using JSON Web Tokens.</li>
                                 <li>Developed platform agnostic .NET web socket and http implementations for multi-threaded API clients.</li>
-                                <li>Wrote memory efficient Google Poly wrapper to rank and page results based on keywords.</li>
-                                <li>Added DevOps functionality through role-based authentication, Prometheus metrics, and Ansible deployment across all servers.</li>
+                                <li>Added DevOps functionality through metrics gathering (Prometheus + Grafana), and deployment scripts (Ansible) for all servers.</li>
                             </ul>
                         </div>
                         <img class="experience-img" style="width:100px;margin:40px" src="res/spatial.svg"/>
@@ -153,7 +179,7 @@
             <div class="dark-slice">
                 <div class="layer">
                     <div class="experience-banner">
-                        <a href="https://miovision.com/" target="_blank"><h2 class="experience-title ten-zero-margin">Miovision Technologies Incorporated</h2></a>
+                        <a href="https://miovision.com/" target="_blank"><h2 class="experience-title ten-zero-margin">Miovision</h2></a>
                         <div class="experience-banner-data">
                             <h2 class="ten-zero-margin">May to Aug, 2017</h2>
                         </div>
@@ -165,23 +191,11 @@
                 <div class="layer">
                     <div class="experience">
                         <div class="experience-details">
-                            <h3 class="ten-zero-margin">Software Developer with the Data Extraction Services team.</h3>
+                            <h3 class="ten-zero-margin">Software Developer - Data Extraction Services Team</h3>
                             <ul>
-                                <li>Independently wrote a performant and self-contained API to export large amounts of
-                                    data from Hibernate + JPA (through pagination and streaming) to AWS.
-                                </li>
-                                <li>Refactored the data extraction workflow to parallelize tasks, increase accuracy,
-                                    and pave the way for future cost savings initiatives.
-                                </li>
-                                <li>Introduced Datadog agents to satellite servers to monitor download speeds and cache
-                                    performance.
-                                </li>
-                                <li>Wrote and maintained POJOs to facilitate json data transfer to and from computer
-                                    vision software.
-                                </li>
-                                <li>Worked closely with computer vision team to determine specifications and integration
-                                    details of new software and the data export API.
-                                </li>
+                                <li>Independently wrote a performant API to export large amounts of data from Hibernate to AWS.</li>
+                                <li>Refactored the data extraction workflow to parallelize tasks, increase accuracy, and pave the way for future cost savings initiatives.</li>
+                                <li>Deployed metrics agents to monitor download speeds and cache performance of satellite servers.</li>
                             </ul>
                         </div>
                         <img class="experience-img" src="res/miovision-logo.png"/>
